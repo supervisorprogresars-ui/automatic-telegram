@@ -1,580 +1,1083 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Paquetería Progresar</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PROGRESAR SECURITY - Registro de Visitantes</title>
 
 <style>
+*{
+    box-sizing:border-box;
+}
 
 body{
-font-family:Arial;
-margin:0;
-background:linear-gradient(135deg,#0b3d91,#1c73e8);
-min-height:100vh;
+    margin:0;
+    font-family:Arial,🚗 *REGISTRO DE VEHÍCULO VISITANTE*
+
+*PROGRESAR SECURITY LTDA*
+
+━━━━━━━━━━━━━━━━━━
+
+👤 *Nombre:* A
+
+🚘 *Placa:* A
+
+📱 *Celular:* 4
+
+🏢 *Torre:* A
+
+🚪 *Apartamento:* A
+
+🕐 *Fecha y hora de registro:* 21/08/26, 5:06:08 p. m.
+
+━━━━━━━━━━━━━━━━━━
+
+✅ *ACEPTACIÓN DE CONDICIONES*
+
+El visitante manifiesta haber leído, comprendido y aceptado las condiciones de uso del parqueadero y el tratamiento de sus datos personales.
+
+🕐 Fecha y hora de aceptación:
+21/08/26, 5:06:08 p. m.
+
+━━━━━━━━━━━━━━━━━━
+
+⚠️ *CONDICIONES DEL PARQUEADERO*
+
+El parqueadero de visitantes corresponde a un área descubierta y se encuentra expuesto a condiciones climáticas, ambientales y a los riesgos propios de un espacio abierto.
+
+El registro del vehículo tiene como finalidad realizar control y seguimiento de los vehículos visitantes y apoyar las labores de seguridad.
+
+El registro no constituye por sí mismo un contrato de depósito, custodia o guarda del vehículo.
+
+El propietario o conductor manifiesta conocer las condiciones del lugar y acepta el ingreso y permanencia del vehículo bajo dichas condiciones.
+
+Lo anterior se entiende sin perjuicio de las responsabilidades que legalmente correspondan a cada parte y de aquellas que no puedan ser excluidas por disposición legal.
+
+━━━━━━━━━━━━━━━━━━
+
+🔐 *TRATAMIENTO DE DATOS PERSONALES*
+
+Los datos suministrados serán utilizados para fines relacionados con el control de acceso, registro de visitantes, seguridad y atención de novedades.
+
+El tratamiento de los datos se realizará conforme a la Ley 1581 de 2012 y las normas aplicables sobre protección de datos personales.
+
+El titular conserva los derechos reconocidos por la legislación colombiana en materia de protección de datos personales.
+
+━━━━━━━━━━━━━━━━━━
+
+*PROGRESAR SECURITY LTDA*
+,sans-serif;
+    background:#f2f5f8;
+    color:#17212b;
 }
 
 header{
-background:#062a66;
-color:white;
-padding:18px;
-text-align:center;
-font-weight:bold;
-font-size:20px;
+    background:linear-gradient(135deg,#0d355d,#1268a8);
+    color:white;
+    padding:22px 15px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+header h1{
+    margin:0;
+    font-size:22px;
+}
+
+header p{
+    margin:7px 0 0;
+    font-size:13px;
 }
 
 .container{
-padding:15px;
+    max-width:700px;
+    margin:auto;
+    padding:15px;
 }
 
 .card{
-background:white;
-padding:15px;
-margin-top:12px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    background:white;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:14px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-input,select{
-width:100%;
-padding:12px;
-margin:6px 0;
-border-radius:8px;
-border:1px solid #ccc;
+h2{
+    color:#0d4e83;
+    font-size:19px;
+    margin-top:0;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    font-size:14px;
+    margin-top:13px;
+    margin-bottom:6px;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccd5dd;
+    border-radius:9px;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#1268a8;
+}
+
+.condiciones{
+    background:#f7f9fb;
+    border:1px solid #d8e0e7;
+    padding:13px;
+    border-radius:10px;
+    margin-top:15px;
+    font-size:12px;
+    line-height:1.55;
+    max-height:230px;
+    overflow-y:auto;
+}
+
+.aceptacion{
+    margin-top:13px;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.aceptacion input{
+    width:auto;
+    transform:scale(1.2);
+    margin-right:7px;
 }
 
 button{
-width:100%;
-padding:14px;
-background:#0b3d91;
-color:white;
-border:none;
-margin-top:8px;
-border-radius:10px;
-font-weight:bold;
+    width:100%;
+    border:none;
+    border-radius:9px;
+    padding:14px;
+    margin-top:12px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.panelSupervisor{
-display:none;
+.btn-principal{
+    background:#1268a8;
+    color:white;
 }
 
-.panelGuarda{
-display:none;
+.btn-copiar{
+    background:#16834b;
+    color:white;
 }
 
-.estadoPendiente{
-background:#ffe0b2;
-color:#e65100;
-padding:6px;
-border-radius:6px;
-font-weight:bold;
+.btn-novedad{
+    background:#fff0ee;
+    color:#b42318;
 }
 
-.estadoEntregado{
-background:#c8e6c9;
-color:#1b5e20;
-padding:6px;
-border-radius:6px;
-font-weight:bold;
+.btn-secundario{
+    background:#e9eef3;
+    color:#0d4e83;
 }
 
-img{
-width:100%;
-margin-top:10px;
-border-radius:10px;
+.informe{
+    width:100%;
+    min-height:300px;
+    padding:12px;
+    border:1px solid #ccd5dd;
+    border-radius:9px;
+    resize:none;
+    font-size:13px;
+    line-height:1.5;
 }
 
-h3{
-color:white;
+.vehiculo{
+    border-bottom:1px solid #e2e7eb;
+    padding:13px 0;
 }
 
+.vehiculo:last-child{
+    border-bottom:none;
+}
+
+.placa{
+    font-size:18px;
+    font-weight:bold;
+    color:#0d4e83;
+}
+
+.datos{
+    font-size:13px;
+    line-height:1.6;
+    margin-top:5px;
+}
+
+.badge{
+    display:inline-block;
+    padding:4px 8px;
+    border-radius:15px;
+    font-size:10px;
+    font-weight:bold;
+    margin-left:5px;
+    background:#e6f5eb;
+    color:#14723e;
+}
+
+.badge.novedad{
+    background:#ffe5e2;
+    color:#b42318;
+}
+
+.mensaje{
+    padding:10px;
+    border-radius:8px;
+    margin-top:10px;
+    display:none;
+    font-size:13px;
+}
+
+.exito{
+    display:block;
+    background:#e3f7ea;
+    color:#126b3a;
+}
+
+.error{
+    display:block;
+    background:#ffe6e3;
+    color:#a51d13;
+}
+
+small{
+    color:#687684;
+}
+
+.hidden{
+    display:none;
+}
 </style>
-
 </head>
 
 <body>
 
 <header>
-📦 PAQUETERÍA PROGRESAR
+    <h1>PROGRESAR SECURITY LTDA</h1>
+    <p>Registro de vehículos visitantes</p>
 </header>
 
 <div class="container">
 
-<h3>🔐 Acceso Guarda</h3>
-
+<!-- FORMULARIO -->
 <div class="card">
 
-<select id="conjuntoLogin"></select>
+<h2>🚗 Registrar visitante</h2>
 
-<input type="password"
-id="claveConjunto"
-placeholder="Clave del conjunto">
+<form id="formulario">
 
-<button onclick="loginGuarda()">
-Entrar
-</button>
+<label>Nombre del propietario o conductor *</label>
+<input 
+    type="text" 
+    id="nombre" 
+    placeholder="Nombre completo"
+    required
+>
+
+<label>Placa del vehículo *</label>
+<input 
+    type="text" 
+    id="placa" 
+    placeholder="Ejemplo: ABC123"
+    maxlength="8"
+    required
+>
+
+<label>Número de celular *</label>
+<input 
+    type="tel" 
+    id="celular" 
+    placeholder="Número de celular"
+    required
+>
+
+<label>Torre *</label>
+<input 
+    type="text" 
+    id="torre" 
+    placeholder="Ejemplo: Torre 5"
+    required
+>
+
+<label>Apartamento *</label>
+<input 
+    type="text" 
+    id="apartamento" 
+    placeholder="Ejemplo: 302"
+    required
+>
+
+<div class="condiciones">
+
+<strong>CONDICIONES DE USO DEL PARQUEADERO DE VISITANTES</strong>
+
+<br><br>
+
+El usuario declara que conoce y acepta las condiciones de uso del parqueadero de visitantes.
+
+<br><br>
+
+El parqueadero corresponde a un área descubierta y se encuentra expuesto a condiciones climáticas, ambientales y a los riesgos propios de un espacio abierto.
+
+<br><br>
+
+El registro del vehículo tiene como finalidad permitir el control y seguimiento de los vehículos visitantes y apoyar las labores de seguridad.
+
+<br><br>
+
+El registro del vehículo <strong>no constituye por sí mismo un contrato de depósito, custodia o guarda del automotor</strong>.
+
+<br><br>
+
+El propietario o conductor manifiesta conocer las condiciones del lugar y acepta que el ingreso y permanencia del vehículo se realizan bajo dichas condiciones.
+
+<br><br>
+
+Lo anterior se entiende sin perjuicio de las responsabilidades que legalmente correspondan a cada parte y de aquellas que no puedan ser excluidas por disposición legal.
+
+<br><br>
+
+<strong>TRATAMIENTO DE DATOS PERSONALES – HABEAS DATA</strong>
+
+<br><br>
+
+Los datos suministrados serán utilizados para fines relacionados con el control de acceso, registro de visitantes, seguridad, atención y seguimiento de novedades relacionadas con el parqueadero.
+
+<br><br>
+
+El tratamiento de los datos deberá realizarse de acuerdo con la Ley 1581 de 2012 y las normas que la reglamenten, respetando los derechos del titular de la información.
+
+<br><br>
+
+El titular podrá ejercer los derechos que le reconoce la legislación colombiana sobre protección de datos personales a través de los canales establecidos por el responsable del tratamiento.
 
 </div>
 
-<div id="panelGuarda" class="panelGuarda">
+<div class="aceptacion">
 
-<h3>📥 Recepción</h3>
+<label>
+<input type="checkbox" id="acepto" required>
+He leído, comprendido y <strong>acepto las condiciones de uso del parqueadero y el tratamiento de mis datos personales</strong>.
+</label>
 
+</div>
+
+<button class="btn-principal" type="submit">
+REGISTRAR VEHÍCULO
+</button>
+
+<div id="mensaje" class="mensaje"></div>
+
+</form>
+
+</div>
+
+
+<!-- VEHICULOS -->
 <div class="card">
 
-<select id="guardaRecibe"></select>
+<h2>📋 Vehículos registrados</h2>
 
-<input id="guia" placeholder="Número guía">
-<input id="torre" placeholder="Torre">
-<input id="apto" placeholder="Apartamento">
-
-<button onclick="registrarRecepcion()">
-Registrar Recepción
-</button>
+<div id="listaVehiculos"></div>
 
 </div>
 
-<h3>📤 Entrega</h3>
 
+<!-- INFORME -->
 <div class="card">
 
-<input id="buscarGuiaEntrega"
-placeholder="Número guía">
+<h2>📲 Informe para WhatsApp</h2>
 
-<input id="recibe"
-placeholder="Nombre quien recibe">
+<small>
+Seleccione un vehículo de la lista para generar el informe.
+</small>
 
-<select id="guardaEntrega"></select>
+<br><br>
 
-<input type="file"
-id="fotoEntrega">
+<textarea 
+    id="informe" 
+    class="informe"
+    readonly
+    placeholder="Aquí aparecerá el informe..."
+></textarea>
 
-<button onclick="registrarEntrega()">
-Registrar Entrega
+<button 
+    class="btn-copiar"
+    onclick="copiarInforme()"
+>
+📋 COPIAR INFORME PARA WHATSAPP
 </button>
+
+<div id="mensajeCopia" class="mensaje"></div>
 
 </div>
 
 </div>
 
-<h3>🔒 Panel Supervisor</h3>
 
-<div class="card">
+<script>
 
-<input type="password"
-id="claveSupervisor"
-placeholder="Clave Supervisor">
+/* =========================================================
+   CONFIGURACIÓN
+========================================================= */
 
-<button onclick="loginSupervisor()">
-Entrar
-</button>
+const CLAVE = "PROGRESAR_VISITANTES_2026";
 
-<div id="panelSupervisor" class="panelSupervisor">
-
-<input id="nuevoConjunto"
-placeholder="Nombre conjunto">
-
-<button onclick="agregarConjunto()">
-Agregar Conjunto
-</button>
-
-<button onclick="verClaves()">
-🔐 Ver Claves
-</button>
-
-<div id="listaClaves"></div>
-
-<input id="nuevoGuarda"
-placeholder="Nuevo guarda">
-
-<button onclick="agregarGuarda()">
-Agregar Guarda
-</button>
-
-<h4>🔎 Buscar Guía</h4>
-
-<input id="buscarGuia"
-placeholder="Número guía">
-
-<button onclick="buscarGuia()">
-Buscar
-</button>
-
-<h4>📦 Filtrar por conjunto</h4>
-
-<select id="filtroConjunto"></select>
-
-<button onclick="verPendientes()">
-Ver Pendientes
-</button>
-
-<button onclick="verHistorial()">
-Ver Historial
-</button>
-
-<button onclick="exportarExcel()">
-📊 Exportar Excel
-</button>
-
-<button onclick="borrarAntiguos()">
-🗑 Borrar Entregados Antiguos
-</button>
-
-<div id="historial"></div>
-
-</div>
-
-</div>
-
-</div>
-
-<script type="module">
-
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
-getFirestore,
-collection,
-addDoc,
-getDocs,
-updateDoc,
-deleteDoc,
-doc
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-const firebaseConfig = {
-
-apiKey: "AIzaSyC2bug8ehtyn58pUoq9hsNAWRnXPklfggE",
-authDomain: "paqueteria-progresar.firebaseapp.com",
-projectId: "paqueteria-progresar",
-storageBucket: "paqueteria-progresar.firebasestorage.app",
-messagingSenderId: "662000932629",
-appId: "1:662000932629:web:9d06fbc537f02d93a9fb1c"
-
-};
-
-const app=initializeApp(firebaseConfig);
-const db=getFirestore(app);
-
-/* GENERAR CLAVE */
-
-function generarClave(){
-
-let numero=
-Math.floor(1000+Math.random()*9000);
-
-return "PRG-"+numero;
-
-}
-
-/* LOGIN */
-
-window.loginSupervisor=function(){
-
-if(claveSupervisor.value==="2026"){
-
-panelSupervisor.style.display="block";
-
-}else{
-
-alert("Clave incorrecta");
-
-}
-
-};
-
-/* AGREGAR CONJUNTO */
-
-window.agregarConjunto=async function(){
-
-let clave=generarClave();
-
-await addDoc(
-collection(db,"conjuntos"),
-{
-nombre:nuevoConjunto.value,
-clave
-}
+let registros = JSON.parse(
+    localStorage.getItem(CLAVE) || "[]"
 );
 
-alert("Clave: "+clave);
+let registroSeleccionado = null;
 
-cargarDatos();
 
-};
+/* =========================================================
+   GUARDAR INFORMACIÓN
+========================================================= */
 
-/* VER CLAVES */
+function guardar(){
 
-window.verClaves=async function(){
+    localStorage.setItem(
+        CLAVE,
+        JSON.stringify(registros)
+    );
 
-listaClaves.innerHTML="";
+}
 
-let query=
-await getDocs(collection(db,"conjuntos"));
 
-query.forEach(d=>{
+/* =========================================================
+   FECHA Y HORA
+========================================================= */
 
-let r=d.data();
+function fechaHora(){
 
-listaClaves.innerHTML+=`
-<div class="card">
-<b>${r.nombre}</b><br>
-Clave: ${r.clave}
-</div>
+    return new Date().toLocaleString(
+        "es-CO",
+        {
+            dateStyle:"short",
+            timeStyle:"medium"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   LIMPIAR REGISTROS DE MÁS DE 7 DÍAS
+   SOLO SI NO TIENEN NOVEDAD
+========================================================= */
+
+function limpiarRegistrosAntiguos(){
+
+    const ahora = Date.now();
+
+    const sieteDias =
+        7 * 24 * 60 * 60 * 1000;
+
+    registros = registros.filter(registro => {
+
+        if(registro.novedad === true){
+
+            return true;
+
+        }
+
+        const antiguedad =
+            ahora -
+            new Date(registro.fechaISO).getTime();
+
+        return antiguedad < sieteDias;
+
+    });
+
+    guardar();
+
+}
+
+
+/* =========================================================
+   ESCAPAR TEXTO
+========================================================= */
+
+function escapar(texto){
+
+    return String(texto || "")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   MOSTRAR REGISTROS
+========================================================= */
+
+function mostrarRegistros(){
+
+    const lista =
+        document.getElementById(
+            "listaVehiculos"
+        );
+
+    if(registros.length === 0){
+
+        lista.innerHTML =
+        `
+        <small>
+        No hay vehículos registrados actualmente.
+        </small>
+        `;
+
+        return;
+
+    }
+
+
+    registros.sort(
+        (a,b) =>
+        new Date(b.fechaISO) -
+        new Date(a.fechaISO)
+    );
+
+
+    lista.innerHTML = registros.map(registro => {
+
+        return `
+
+        <div class="vehiculo">
+
+            <div class="placa">
+
+                ${escapar(registro.placa)}
+
+                ${
+                    registro.novedad
+                    ?
+                    '<span class="badge novedad">CON NOVEDAD</span>'
+                    :
+                    '<span class="badge">SIN NOVEDAD</span>'
+                }
+
+            </div>
+
+            <div class="datos">
+
+                👤 ${escapar(registro.nombre)}<br>
+
+                📱 ${escapar(registro.celular)}<br>
+
+                🏢 Torre ${escapar(registro.torre)}
+                -
+                Apartamento ${escapar(registro.apartamento)}
+                <br>
+
+                🕐 ${escapar(registro.fecha)}
+
+                ${
+                    registro.novedad
+                    ?
+                    `
+                    <br>
+                    ⚠️ <strong>Novedad:</strong>
+                    ${escapar(registro.textoNovedad)}
+                    `
+                    :
+                    ""
+                }
+
+            </div>
+
+
+            <button
+                class="btn-secundario"
+                onclick="seleccionarRegistro('${registro.id}')"
+            >
+                VER / COPIAR INFORME
+            </button>
+
+
+            ${
+                registro.novedad
+                ?
+                `
+                <button
+                    class="btn-secundario"
+                    onclick="quitarNovedad('${registro.id}')"
+                >
+                    Quitar estado de novedad
+                </button>
+                `
+                :
+                `
+                <button
+                    class="btn-novedad"
+                    onclick="registrarNovedad('${registro.id}')"
+                >
+                    ⚠️ REGISTRAR NOVEDAD
+                </button>
+                `
+            }
+
+        </div>
+
+        `;
+
+    }).join("");
+
+}
+
+
+/* =========================================================
+   REGISTRAR VEHÍCULO
+========================================================= */
+
+document
+.getElementById("formulario")
+.addEventListener(
+"submit",
+function(event){
+
+    event.preventDefault();
+
+
+    const nombre =
+        document
+        .getElementById("nombre")
+        .value
+        .trim();
+
+
+    const placa =
+        document
+        .getElementById("placa")
+        .value
+        .trim()
+        .toUpperCase();
+
+
+    const celular =
+        document
+        .getElementById("celular")
+        .value
+        .trim();
+
+
+    const torre =
+        document
+        .getElementById("torre")
+        .value
+        .trim();
+
+
+    const apartamento =
+        document
+        .getElementById("apartamento")
+        .value
+        .trim();
+
+
+    const acepto =
+        document
+        .getElementById("acepto")
+        .checked;
+
+
+    if(!acepto){
+
+        mostrarMensaje(
+            "Debe aceptar las condiciones.",
+            false
+        );
+
+        return;
+
+    }
+
+
+    const ahora =
+        new Date();
+
+
+    const registro = {
+
+        id:
+            Date.now().toString(),
+
+        nombre:
+            nombre,
+
+        placa:
+            placa,
+
+        celular:
+            celular,
+
+        torre:
+            torre,
+
+        apartamento:
+            apartamento,
+
+        fecha:
+            ahora.toLocaleString(
+                "es-CO",
+                {
+                    dateStyle:"short",
+                    timeStyle:"medium"
+                }
+            ),
+
+        fechaISO:
+            ahora.toISOString(),
+
+        aceptacion:
+            true,
+
+        fechaAceptacion:
+            ahora.toISOString(),
+
+        novedad:
+            false,
+
+        textoNovedad:
+            ""
+
+    };
+
+
+    registros.push(registro);
+
+    guardar();
+
+    mostrarRegistros();
+
+
+    document
+    .getElementById("formulario")
+    .reset();
+
+
+    seleccionarRegistro(registro.id);
+
+
+    mostrarMensaje(
+        "✓ Vehículo registrado correctamente.",
+        true
+    );
+
+});
+
+
+/* =========================================================
+   SELECCIONAR REGISTRO
+========================================================= */
+
+function seleccionarRegistro(id){
+
+    const registro =
+        registros.find(
+            r => r.id === id
+        );
+
+
+    if(!registro){
+
+        return;
+
+    }
+
+
+    registroSeleccionado =
+        registro;
+
+
+    const texto = generarInforme(registro);
+
+
+    document
+    .getElementById("informe")
+    .value = texto;
+
+
+    document
+    .getElementById("informe")
+    .scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+}
+
+
+/* =========================================================
+   GENERAR INFORME WHATSAPP
+========================================================= */
+
+function generarInforme(registro){
+
+    let informe =
+
+`🚗 *REGISTRO DE VEHÍCULO VISITANTE*
+
+*PROGRESAR SECURITY LTDA*
+
+━━━━━━━━━━━━━━━━━━
+
+👤 *Nombre:* ${registro.nombre}
+
+🚘 *Placa:* ${registro.placa}
+
+📱 *Celular:* ${registro.celular}
+
+🏢 *Torre:* ${registro.torre}
+
+🚪 *Apartamento:* ${registro.apartamento}
+
+🕐 *Fecha y hora de registro:* ${registro.fecha}
+
+━━━━━━━━━━━━━━━━━━
+
+✅ *ACEPTACIÓN DE CONDICIONES*
+
+El visitante manifiesta haber leído, comprendido y aceptado las condiciones de uso del parqueadero y el tratamiento de sus datos personales.
+
+🕐 Fecha y hora de aceptación:
+${new Date(registro.fechaAceptacion).toLocaleString("es-CO",{
+dateStyle:"short",
+timeStyle:"medium"
+})}
+
+━━━━━━━━━━━━━━━━━━
+
+⚠️ *CONDICIONES DEL PARQUEADERO*
+
+El parqueadero de visitantes corresponde a un área descubierta y se encuentra expuesto a condiciones climáticas, ambientales y a los riesgos propios de un espacio abierto.
+
+El registro del vehículo tiene como finalidad realizar control y seguimiento de los vehículos visitantes y apoyar las labores de seguridad.
+
+El registro no constituye por sí mismo un contrato de depósito, custodia o guarda del vehículo.
+
+El propietario o conductor manifiesta conocer las condiciones del lugar y acepta el ingreso y permanencia del vehículo bajo dichas condiciones.
+
+Lo anterior se entiende sin perjuicio de las responsabilidades que legalmente correspondan a cada parte y de aquellas que no puedan ser excluidas por disposición legal.
+
+━━━━━━━━━━━━━━━━━━
+
+🔐 *TRATAMIENTO DE DATOS PERSONALES*
+
+Los datos suministrados serán utilizados para fines relacionados con el control de acceso, registro de visitantes, seguridad y atención de novedades.
+
+El tratamiento de los datos se realizará conforme a la Ley 1581 de 2012 y las normas aplicables sobre protección de datos personales.
+
+El titular conserva los derechos reconocidos por la legislación colombiana en materia de protección de datos personales.
+
+━━━━━━━━━━━━━━━━━━
+
+*PROGRESAR SECURITY LTDA*
 `;
 
-});
 
-};
 
-/* AGREGAR GUARDA */
+    if(registro.novedad){
 
-window.agregarGuarda=async function(){
+        informe +=
 
-await addDoc(
-collection(db,"guardas"),
-{
-nombre:nuevoGuarda.value
-}
-);
+`
+━━━━━━━━━━━━━━━━━━
 
-cargarDatos();
+⚠️ *NOVEDAD REGISTRADA*
 
-};
+${registro.textoNovedad}
 
-/* LOGIN GUARDA */
-
-window.loginGuarda=async function(){
-
-let acceso=false;
-
-let query=
-await getDocs(collection(db,"conjuntos"));
-
-query.forEach(d=>{
-
-let r=d.data();
-
-if(r.nombre===conjuntoLogin.value
-&& r.clave===claveConjunto.value){
-
-acceso=true;
-
-}
-
-});
-
-if(acceso){
-
-panelGuarda.style.display="block";
-
-}else{
-
-alert("Clave incorrecta");
-
-}
-
-};
-
-/* RECEPCIÓN */
-
-window.registrarRecepcion=async function(){
-
-await addDoc(
-collection(db,"paquetes"),
-{
-conjunto:conjuntoLogin.value,
-guia:guia.value,
-torre:torre.value,
-apto:apto.value,
-estado:"PENDIENTE",
-fechaRecepcion:new Date().toLocaleString()
-}
-);
-
-alert("Paquete registrado");
-
-};
-
-/* ENTREGA */
-
-window.registrarEntrega=async function(){
-
-let query=
-await getDocs(collection(db,"paquetes"));
-
-query.forEach(async d=>{
-
-let r=d.data();
-
-if(r.guia===buscarGuiaEntrega.value){
-
-let archivo=fotoEntrega.files[0];
-
-let reader=new FileReader();
-
-reader.onload=async function(){
-
-await updateDoc(
-doc(db,"paquetes",d.id),
-{
-estado:"ENTREGADO",
-recibe:recibe.value,
-guardaEntrega:guardaEntrega.value,
-fotoEntrega:reader.result,
-fechaEntrega:new Date().toLocaleString()
-}
-);
-
-alert("Entrega registrada");
-
-};
-
-if(archivo){
-
-reader.readAsDataURL(archivo);
-
-}
-
-}
-
-});
-
-};
-
-/* BUSCAR GUIA */
-
-window.buscarGuia=async function(){
-
-historial.innerHTML="";
-
-let query=
-await getDocs(collection(db,"paquetes"));
-
-query.forEach(d=>{
-
-let r=d.data();
-
-if(r.guia===buscarGuia.value){
-
-historial.innerHTML+=`
-<div class="card">
-<b>Guía:</b> ${r.guia}<br>
-<b>Estado:</b> ${r.estado}
-</div>
+🕐 Fecha de la novedad:
+${new Date(registro.fechaNovedad).toLocaleString("es-CO",{
+dateStyle:"short",
+timeStyle:"medium"
+})}
 `;
 
-}
+    }
 
-});
 
-};
-
-/* BORRAR ANTIGUOS */
-
-window.borrarAntiguos=async function(){
-
-let query=
-await getDocs(collection(db,"paquetes"));
-
-query.forEach(async d=>{
-
-let r=d.data();
-
-if(r.estado==="ENTREGADO"){
-
-await deleteDoc(
-doc(db,"paquetes",d.id)
-);
+    return informe;
 
 }
 
-});
 
-alert("Paquetes entregados eliminados");
+/* =========================================================
+   COPIAR INFORME
+========================================================= */
 
-};
+async function copiarInforme(){
 
-/* EXPORTAR EXCEL */
+    const texto =
+        document
+        .getElementById("informe")
+        .value;
 
-window.exportarExcel=async function(){
 
-let query=
-await getDocs(collection(db,"paquetes"));
+    if(!texto){
 
-let csv="Conjunto,Guia,Torre,Apto,Estado\n";
+        mostrarCopia(
+            "Primero seleccione un vehículo.",
+            false
+        );
 
-query.forEach(d=>{
+        return;
 
-let r=d.data();
+    }
 
-csv+=
-r.conjunto+","+
-r.guia+","+
-r.torre+","+
-r.apto+","+
-r.estado+"\n";
 
-});
+    try{
 
-let blob=new Blob([csv]);
+        await navigator
+        .clipboard
+        .writeText(texto);
 
-let link=document.createElement("a");
+        mostrarCopia(
+            "✓ Informe copiado. Ya puede pegarlo en WhatsApp.",
+            true
+        );
 
-link.href=URL.createObjectURL(blob);
+    }
 
-link.download="paquetes.csv";
+    catch(error){
 
-link.click();
+        const campo =
+            document
+            .getElementById("informe");
 
-};
+        campo.select();
 
-/* CARGAR DATOS */
+        document.execCommand("copy");
 
-async function cargarDatos(){
+        mostrarCopia(
+            "✓ Informe copiado.",
+            true
+        );
 
-let conjuntos=
-await getDocs(collection(db,"conjuntos"));
-
-let guardas=
-await getDocs(collection(db,"guardas"));
-
-conjuntoLogin.innerHTML="";
-filtroConjunto.innerHTML="";
-guardaRecibe.innerHTML="";
-guardaEntrega.innerHTML="";
-
-conjuntos.forEach(d=>{
-
-let nombre=d.data().nombre;
-
-conjuntoLogin.innerHTML+=
-`<option>${nombre}</option>`;
-
-filtroConjunto.innerHTML+=
-`<option>${nombre}</option>`;
-
-});
-
-guardas.forEach(d=>{
-
-let nombre=d.data().nombre;
-
-guardaRecibe.innerHTML+=
-`<option>${nombre}</option>`;
-
-guardaEntrega.innerHTML+=
-`<option>${nombre}</option>`;
-
-});
+    }
 
 }
 
-cargarDatos();
 
-</script>
+/* =========================================================
+   REGISTRAR NOVEDAD
+========================================================= */
 
-</body>
-</html>
+function registrarNovedad(id){
+
+    const registro =
+        registros.find(
+            r => r.id === id
+        );
+
+
+    if(!registro){
+
+        return;
+
+    }
+
+
+    const novedad =
+        prompt(
+            "Describa la novedad presentada:"
+        );
+
+
+    if(novedad === null){
+
+        return;
+
+    }
+
+
+    if(novedad.trim() === ""){
+
+        alert(
+            "Debe escribir una descripción de la novedad."
+        );
+
+        return;
+
+    }
+
+
+    registro.novedad =
+        true;
+
+
+    registro.textoNovedad =
+        novedad.trim();
+
+
+    registro.fechaNovedad =
+        new Date().toISOString();
+
+
+    guardar();
+
+    mostrarRegistros();
+
+    seleccionarRegistro(id);
+
+
+    alert(
+        "La novedad fue registrada. Este vehículo NO será eliminado automáticamente."
+    );
+
+}
+
+
+/* =========================================================
+   QUITAR NOVEDAD
+========================================================= */
+
+function quitarNovedad(id){
+
+    const registro =
+        registros.find(
+            r => r.id === id
+        );
+
+
+    if(!registro){
+
+        return;
+
+    }
+
+
+    const confirmar =
+        confirm(
+            "¿Está seguro de quitar la novedad?"
+        );
+
+
+    if(!confirmar){
+
+        return;
+
+    }
+
+
+    registro.novedad =
+        false;
+  
